@@ -14,7 +14,20 @@ body {
   max-width: 900px;
   padding: 5em 2em 4em;
 }
-  
+ 
+mg {
+  animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+  background: transparent;
+  border: 10px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  display: block;
+  margin: 1.3em auto;
+  max-width: 95%;
+}
+.jumbotron{
+  background-image: url("https://sixbluepetals.files.wordpress.com/2010/03/happy-woman.jpg");
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-weight: 600;

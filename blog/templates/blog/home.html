@@ -10,7 +10,17 @@
             </div>
             <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
-            <img class="rounded article-img" src="{{ post.image.url }}">
+            <img height="400" width="400" src="{{ post.image.url}}" alt="{{ post.title }}">
+            <div class="card-footer">
+              {% for comment in post.comments.all %}
+              <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+                <p><bold>Comment By:</bold>
+                  <span class="font-weight-bold">{{ comment.author }} &middot;</span><br>
+                  {{ comment }}
+                  <img height="400" width="400" src="{{ comment.image.url}}" alt="{{ post.title }}">
+                </p>
+      {% endfor %}
+            </div>
           </div>
         </article>
     {% endfor %}

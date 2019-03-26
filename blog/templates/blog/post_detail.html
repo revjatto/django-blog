@@ -15,7 +15,7 @@
       </div>
       <h2 class="article-title">{{ object.title }}</h2>
       <p class="article-content">{{ object.content }}</p>
-      <img class="rounded article-img" src="{{ post.image.url }}">
+      <img height="400" width="400" src="{{ post.image.url}}" alt="{{ post.title }}">
     </div>
   </article>
 {% endblock content %}
